@@ -36,7 +36,7 @@ for file_name in all_files:
 
         for idx in range (ctg_start, ctg_start + window_size, window_step):
             if (not (ctg_name, idx) in windows_dict):
-                windows_dict[(ctg_name, idx)] = [0, 0, 0]
+                windows_dict[(ctg_name, idx)] = [0, 0, 0, 0]
             windows_dict[(ctg_name, idx)][ctg_category] += 1
 
     file.close()
@@ -45,9 +45,10 @@ for file_name in all_files:
 print("Writing the output file...")
 output_file = open(output_file_name, "w")
 
+output_file.write("contig_name\tstart\tno_intr\tintr_12\tintr_21\tinvalid\n")
 for key in windows_dict:
     categories = windows_dict[key]
-    line = key[0] + "\t" + str(key [1]) + "\t" + str(categories[0]) + "\t" + str(categories[1]) + "\t" + str(categories[2]) + "\n"
+    line = key[0] + "\t" + str(key [1]) + "\t" + str(categories[0]) + "\t" + str(categories[1]) + "\t" + str(categories[2]) + "\t" + str(categories[3]) + "\n"
     output_file.write(line)
 
 output_file.close()
