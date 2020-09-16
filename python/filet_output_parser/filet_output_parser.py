@@ -10,7 +10,7 @@ sub_windows_count = window_size / window_step
 
 windows_dict = {}
 
-output_file_name = "output.sv"
+output_file_name = "result_output.sv"
 
 dir_name = "G:filet\\27_real_data_classification\\sliding\\results\\*"
 all_files = glob.glob(dir_name)
