@@ -1,7 +1,1 @@
-# BioinformaticsScripts
-
-A set of scripts I used during my PhD thesis to install / run bioinformatics software.
-
-These scripts were written to be run on SLURM (and sometimes Torque) clusters, without administrator rights.
-
-All the information can be found in Wiki.
+This repository is created to keep a trace of bioinformatics-related papers/tools that I read/used during my PhD thesis at ULB. Its content is available on the [Wiki](https://github.com/SvitlanaLukicheva/BioinformaticsResources/wiki).
